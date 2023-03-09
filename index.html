@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="btn-start">
+        <button class="button btn-lg">Sınavı Baslat</button>
+    </div>
+
+    <div class="point-card">
+      <div class="dogru_title" onclick="skoruYaz(this)">Doğru: 
+          <span id="d_sayisi">0</span>
+      </div>
+      <div class="yanlis_title" onclick="skoruYaz(this)">Yanlış:
+          <span id="y_sayisi">0</span>
+      </div>
+      <div class="puan_title" onclick="skoruYaz(this)">Puan:
+          <span id="p_toplam">0</span>
+      </div>
+    </div>
+    <div class="text_box">
+      <header class="card-header">
+        <div class="title">Kültür Sınavı</div>
+      </header>
+      <section class="card-body">
+        <div class="question_text">
+          <!-- <span
+            >1-Tarihte ilk parayı hangi uygarlık bulmuş ve kullanmıştır?
+          </span> -->
+        </div>
+        <div class="ask_answers">
+          <div class="answers">
+            <div class="answer a correct" data-secim="A" onclick="secenekSecimi(this)"> 
+                 <span><b>a</b></span>
+           </div>
+           <div class="answer b correct" data-secim="B" onclick="secenekSecimi(this)"> 
+                 <span><b>b</b></span>
+           </div>
+           <div class="answer a correct" data-secim="D" onclick="secenekSecimi(this)"> 
+                 <span><b>c</b></span>
+           </div>
+           <div class="answer b correct" data-secim="C" onclick="secenekSecimi(this)"> 
+                  <span><b>d</b></span>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <footer class="card-footer">
+        <button class="back_btn btn-sm" onclick="back()">Önceki Soru</button>
+        <button class="next_btn btn-sm" onclick="next()">Sonraki Soru</button>
+      </footer>
+    </div>
+    <div class="card score-box">
+      <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+      <div class="score-body"></div>
+        <div class="score-box-button">
+             <button class="finish btn-md" onclick="sinaviBitir()">Sınavı bitir</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
